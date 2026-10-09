@@ -35,7 +35,14 @@ public class CommandeService {
         articleLigneCommande.setId(articleLigneCommandeDto.getId());
         articleLigneCommande.setPrix(articleLigneCommandeDto.getPrix());
 
+        articleLigneCommande.setSkuCode(articleLigneCommandeDto.getSkucode());
+        articleLigneCommande.setQuantite(articleLigneCommandeDto.getQuantite());
 
+        return articleLigneCommande;
+    }
+
+    public List<Commande> getCommandes() {
+        return commandeRepository.findAll();
     }
 
 }
